@@ -21,16 +21,21 @@ console.log(collection);
 
 
 //show collection
-function showCollection() {
-
+function showCollection(newcollection) {
+    for (each of newcollection) {
+        console.log(each);
+    }
+    console.log('Collection length ', newcollection.length);
 }
+
+console.log(showCollection(["Physical Graffiti", "Led Zepplin", "1975"]));
 
 
 //find by artist
 function findByArtist(artist) {
     let results = [];
     for (each of collection) {
-        if (each == collection.artist) {
+        if (each.artist == artist) {
             results.push(each);
             return results;
         }
